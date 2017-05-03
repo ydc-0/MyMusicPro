@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import static cn.edu.xidian.www.mymusicpro.R.layout.activity_display_message;
 
 public class DisplayMessageActivity extends AppCompatActivity {
+    private String TAG = "DisplayMessageActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +25,11 @@ public class DisplayMessageActivity extends AppCompatActivity {
 //        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 //        TextView textView = new TextView(this);
 //        textView.setTextSize(40);
-//        textView.setText(message);
-
-//        LinearLayout layout = (LinearLayout) findViewById(R.id.content);
+//        //textView.setText(message);
+//        textView.setText("message");
+//        Log.i(TAG, "onCreate: message: " + message);
+//
+//       LinearLayout layout = (LinearLayout) findViewById(R.id.content);
 //        layout.addView(textView);
     }
 }
