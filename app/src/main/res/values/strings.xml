@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MyMusicPro</string>
+
+    <string name="main_title">主菜单</string>
+
+    <string name="play_item">Play item</string>
+
 </resources>

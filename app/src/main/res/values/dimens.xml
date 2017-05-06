@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_menu_line_height">180dp</dimen>
+    <dimen name="main_menu_width">170dp</dimen>
+    <dimen name="main_menu_height">170dp</dimen>
+    <dimen name="main_menu_up">5dp</dimen>
+    <dimen name="main_menu_left">5dp</dimen>
+    <dimen name="main_menu_right">5dp</dimen>
+
+
+    <dimen name="media_item_icon_margin_start">12dp</dimen>
+    <dimen name="media_item_height">72dp</dimen>
+    <dimen name="media_item_text_margin_start">60dp</dimen>
+</resources>
