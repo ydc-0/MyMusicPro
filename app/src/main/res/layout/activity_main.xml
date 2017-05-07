@@ -11,6 +11,7 @@
     <LinearLayout
         android:layout_width="368dp"
         android:layout_height="495dp"
+
         android:background="@drawable/xidian_logo_background"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"

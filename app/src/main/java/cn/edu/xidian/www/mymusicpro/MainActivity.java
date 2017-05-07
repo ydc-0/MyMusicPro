@@ -5,23 +5,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.Toast;
 
-import cn.edu.xidian.www.mymusicpro.music.MusicList;
+import cn.edu.xidian.www.mymusicpro.music.MusicUtils;
 
 public class MainActivity extends AppCompatActivity {
     private String TAG = "MainActivity";
-    public MusicList main_music_liat = new MusicList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle(R.string.main_title);
-
-        main_music_liat.InitMusicList();
-
-
+        Toast.makeText(getApplicationContext(), "扫描本地歌曲...", Toast.LENGTH_LONG).show();
+        MusicUtils.SearchLocalMusic(this);
     }
 
     public void StartLocalMusic(View view) {
@@ -34,11 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void MusicRecommendation(View view) {
         Log.i(TAG, "MusicRecommendation: start.");
-
     }
 
     public void EnterSettings(View view) {
         Log.i(TAG, "EnterSettings: start.");
-
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
     }
 }
