@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by 张磊 on 2017/5/7.
+ * Created by chenyudong on 2017/5/7.
  */
 
 public class MusicUtils {
@@ -32,6 +32,7 @@ public class MusicUtils {
         Cursor cursor = context.getContentResolver().query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, null, null,
                 null, MediaStore.Audio.AudioColumns.IS_MUSIC);
         if (cursor != null) {
+            local_music_list.clear();
             while (cursor.moveToNext()) {
                 SongInfo song = new SongInfo();
 
