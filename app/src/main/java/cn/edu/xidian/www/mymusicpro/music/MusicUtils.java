@@ -21,6 +21,8 @@ public class MusicUtils {
 
     private static List<SongInfo> local_music_list = new ArrayList<>();
 
+    private static List<SongInfo> music_url_list = new ArrayList<>();
+
 
     public static List<SongInfo> getMusicData() {
         return local_music_list;

@@ -7,12 +7,17 @@
     <dimen name="main_menu_left">5dp</dimen>
     <dimen name="main_menu_right">5dp</dimen>
 
-    <dimen name="settings_button_height">20dp</dimen>
-    <dimen name="settings_">5dp</dimen>
-    <dimen name="settings">5dp</dimen>
+    <dimen name="settings_button_height">45dp</dimen>
+	<dimen name="settings_imagine_cut">1dp</dimen>
+    <dimen name="settings_textview">19dp</dimen>
+	<dimen name="settings_usr_info">26dp</dimen>
+	<dimen name="settings_usr_info_text_w">80dp</dimen>
+	<dimen name="settings_usr_info_right">5dp</dimen>
+    <dimen name="settings_gap">4dp</dimen>
+	<dimen name="settings_laber_lay_h">180dp</dimen>
 
 
-
+	<dimen name="local_song_info">30dp</dimen>
     <dimen name="media_item_icon_margin_start">0dp</dimen>
     <dimen name="media_item_height">60dp</dimen>
     <dimen name="media_item_text_margin_start">2dp</dimen>

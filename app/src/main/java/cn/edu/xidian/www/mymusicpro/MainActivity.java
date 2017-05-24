@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import cn.edu.xidian.www.mymusicpro.music.MusicUtils;
+import cn.edu.xidian.www.mymusicpro.settings.SettingDat;
 
 public class MainActivity extends AppCompatActivity {
     private String TAG = "MainActivity";
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setTitle(R.string.main_title);
         Toast.makeText(getApplicationContext(), "扫描本地歌曲...", Toast.LENGTH_LONG).show();
         MusicUtils.SearchLocalMusic(this);
+        SettingDat.InitSettingDat(this);
     }
 
     public void StartLocalMusic(View view) {

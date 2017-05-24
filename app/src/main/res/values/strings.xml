@@ -11,21 +11,25 @@
 
 
     <!--设置界面的string-->
-    <string name="setting_local_info">用户信息（*为必填项，仅用于识别不同用户以及提供更加精确的推荐）：</string>
+    <string name="setting_button_default">恢复默认</string>
+    <string name="setting_button_save">保存</string>
+
+    <string name="setting_local_info">用户信息（*为必填项，仅用于识别不同用户）：</string>
     <string name="setting_usr_name">用户名*</string>
-    <string name="setting_user_name_text">usrname</string>
+    <string name="setting_usr_name_text">usrname</string>
     <string name="setting_usr_email">邮箱</string>
     <string name="setting_usr_email_text">usrname@example.com</string>
     <string name="setting_usr_addr">地址</string>
-    <string name="setting_usr_addr_text">中国北京</string>
+    <string name="setting_usr_addr_text">西安</string>
 
     <string name="setting_net_server">设置服务器信息：</string>
-    <string name="setting_net_server_addr">服务器地址</string>
-    <string name="setting_net_server_addr_text">127.0.0.1</string>
-    <string name="setting_net_server_port">服务器端口</string>
+    <string name="setting_net_server_addr">IP地址*</string>
+    <string name="setting_net_server_addr_text">192.168.0.102</string>
+    <string name="setting_net_server_port">端口*</string>
     <string name="setting_net_server_port_text">1234</string>
 
-    <string name="setting_label">设置喜爱的歌曲类型：</string>
+    <string name="setting_personal">个性化设置：</string>
+    <string name="setting_label">喜爱的歌曲类型</string>
     <string name="setting_label_1">流行</string>
     <string name="setting_label_2">摇滚</string>
     <string name="setting_label_3">民谣</string>
