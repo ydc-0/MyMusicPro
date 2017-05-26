@@ -28,4 +28,19 @@ public class SongInfo {
      * 歌曲的大小
      */
     public long size;
+
+//    public SongInfo(SongInfo newinfo) {
+//        this.song = newinfo.song;
+//        this.singer = newinfo.singer;
+//        this.path = newinfo.path;
+//        this.duration = newinfo.duration;
+//        this.size = newinfo.size;
+//    }
+//    public SongInfo() {
+//        this.song = "";
+//        this.singer = "";
+//        this.path = "";
+//        this.duration = 0;
+//        this.size = 0;
+//    }
 }

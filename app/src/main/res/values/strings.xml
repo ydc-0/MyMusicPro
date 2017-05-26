@@ -8,6 +8,7 @@
     <string name="menu_save">保存</string>
 
     <string name="local_music_up_text">在本地发现了 %d 首歌曲</string>
+    <string name="local_music_search">扫描本地歌曲...</string>
 
 
     <!--设置界面的string-->
@@ -39,10 +40,33 @@
     <string name="setting_label_7">轻音乐</string>
     <string name="setting_label_8">古典</string>
 
+    <string name="setting_system">其他设置：</string>
+    <string name="setting_music_size">歌曲过滤(KB) ></string>
+    <string name="setting_min_size">800</string>
+
+
+    <string name="pre_set">Settings</string>
+    <string name="pre_set_check">file_check</string>
+    <string name="key_usr_name">usr_name</string>
+    <string name="key_usr_email">usr_email</string>
+    <string name="key_usr_addr">usr_addr</string>
+    <string name="key_server_ip">server_ip</string>
+    <string name="key_server_port">server_port</string>
+    <string name="key_personal_label">personal_label</string>
+
+
+    <string name="net_music_null">推荐列表为空，请检查网络连接。</string>
+    <string name="net_message">推荐的音乐：\n当前第 %d 首。</string>
+    <string name="net_button_change">换一首</string>
+    <string name="net_button_down">下载这首歌曲</string>
+    <string name="net_button_play">在线播放</string>
+    <string name="net_button_stop">停止</string>
+    <string name="net_text_song">歌曲名</string>
+    <string name="net_text_url">htpp://...</string>
+
 
     <string name="play_item">Play item</string>
     <string name="title_activity_new_settings">Settings</string>
-
 
 
 </resources>

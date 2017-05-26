@@ -27,6 +27,9 @@ public class MusicUtils {
     public static List<SongInfo> getMusicData() {
         return local_music_list;
     }
+    public static List<SongInfo> getMusic_url_list() {
+        return music_url_list;
+    }
 
     public static void SearchLocalMusic(Context context) {
         Log.i(TAG, "getMusicData: start.");
@@ -45,7 +48,7 @@ public class MusicUtils {
                 song.size = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.SIZE));
 //                Log.i(TAG, "getMusicData: song:" + song.song + "singer:" + song.singer + "path:" + song.path
 //                        + "duration:" + song.duration + "size:" + song.size);
-                if (song.size > 1000 * 800) {
+                if (song.size > 1024 * 800) {
                     // 注释部分是切割标题，分离出歌曲名和歌手 （本地媒体库读取的歌曲信息不规范）
                     if (song.song.contains("-")) {
                         String[] str = song.song.split("-");
@@ -70,6 +73,11 @@ public class MusicUtils {
         } else {
             return time / 1000 / 60 + ":" + time / 1000 % 60;
         }
+
+    }
+
+    public void InitUrlMusic(List<SongInfo> songInfo) {
+        music_url_list = songInfo;
 
     }
 }

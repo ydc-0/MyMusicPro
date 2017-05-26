@@ -10,11 +10,12 @@
     <dimen name="settings_button_height">45dp</dimen>
 	<dimen name="settings_imagine_cut">1dp</dimen>
     <dimen name="settings_textview">19dp</dimen>
-	<dimen name="settings_usr_info">26dp</dimen>
+	<dimen name="settings_usr_info">25dp</dimen>
 	<dimen name="settings_usr_info_text_w">80dp</dimen>
+    <dimen name="settings_usr_info_text_w2">120dp</dimen>
 	<dimen name="settings_usr_info_right">5dp</dimen>
     <dimen name="settings_gap">4dp</dimen>
-	<dimen name="settings_laber_lay_h">180dp</dimen>
+	<dimen name="settings_laber_lay_h">140dp</dimen>
 
 
 	<dimen name="local_song_info">30dp</dimen>
@@ -24,5 +25,15 @@
     <dimen name="media_item_time_end">5dp</dimen>
     <dimen name="media_item_line1_up">10dp</dimen>
     <dimen name="media_item_line2_up">3dp</dimen>
+	
+	<dimen name="net_button_h">45dp</dimen>
+	<dimen name="net_text_msg_h">40dp</dimen>
+	<dimen name="net_img_h">260dp</dimen>
+	<dimen name="net_img_w">260dp</dimen>
+	<dimen name="net_img_left">50dp</dimen>
+	<dimen name="net_gap1">5dp</dimen>
+	<dimen name="net_gap_button">10dp</dimen>
+    <dimen name="net_text_song_h">45dp</dimen>
+    <dimen name="net_text_url_h">45dp</dimen>
 
 </resources>

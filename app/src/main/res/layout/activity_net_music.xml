@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.edu.xidian.www.mymusicpro.NetMusicActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/net_song_msg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/net_text_msg_h"
+        android:lines="2"
+        android:text=""
+        android:textColor="@color/colorDarkBlue"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/net_button_change"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/net_button_down"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/net_music_song_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/net_gap1"
+        android:lines="2"
+        android:text="@string/net_text_song"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/net_img_w"
+        android:layout_height="@dimen/net_img_h"
+        android:layout_marginStart="@dimen/net_img_left"
+        app:srcCompat="@drawable/music_icon_big" />
+
+    <TextView
+        android:id="@+id/net_music_song_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:text="@string/net_text_url"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/net_gap1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_play_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/net_button_play"
+            android:onClick="OnButtonPlayOnline"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/net_button_stop"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/music_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+</LinearLayout>

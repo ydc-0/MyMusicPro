@@ -18,9 +18,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle(R.string.main_title);
-        Toast.makeText(getApplicationContext(), "扫描本地歌曲...", Toast.LENGTH_LONG).show();
-        MusicUtils.SearchLocalMusic(this);
         SettingDat.InitSettingDat(this);
+
+        Toast.makeText(getApplicationContext(), R.string.local_music_search, Toast.LENGTH_LONG).show();
+        MusicUtils.SearchLocalMusic(this);
+
     }
 
     public void StartLocalMusic(View view) {
@@ -33,11 +35,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void MusicRecommendation(View view) {
         Log.i(TAG, "MusicRecommendation: start.");
+        Intent intent = new Intent(this, NetMusicActivity.class);
+        startActivity(intent);
     }
 
     public void EnterSettings(View view) {
         Log.i(TAG, "EnterSettings: start.");
         Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        // 结束Activity&从栈中移除该Activity
+
     }
 }

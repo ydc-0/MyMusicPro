@@ -7,5 +7,6 @@
     <color name="colorClear">#91fffaad</color>
     <color name="colorBlack">#000000</color>
     <color name="colorNone">#00ffffff</color>
+    <color name="colorDarkBlue">#06532f</color>
 
 </resources>

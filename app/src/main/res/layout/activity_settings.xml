@@ -189,7 +189,7 @@
             android:layout_marginRight="@dimen/settings_usr_info_right"
             android:layout_weight="1"
             android:background="@drawable/edit_bg"
-            android:inputType="textPostalAddress"
+            android:inputType="number"
             android:maxLines="1"
             android:text="@string/setting_net_server_port_text" />
 
@@ -233,22 +233,25 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
-                    android:id="@+id/checkBox4"
+                    android:id="@+id/check_laber1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CheckBox" />
+                    android:layout_weight="1"
+                    android:text="@string/setting_label_1" />
 
                 <CheckBox
-                    android:id="@+id/checkBox3"
+                    android:id="@+id/check_laber2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CheckBox" />
+                    android:layout_weight="1"
+                    android:text="@string/setting_label_2" />
 
                 <CheckBox
-                    android:id="@+id/checkBox2"
+                    android:id="@+id/check_laber3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CheckBox" />
+                    android:layout_weight="1"
+                    android:text="@string/setting_label_3" />
             </TableRow>
 
             <TableRow
@@ -256,22 +259,25 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
-                    android:id="@+id/checkBox7"
+                    android:id="@+id/check_laber4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CheckBox" />
+                    android:layout_weight="1"
+                    android:text="@string/setting_label_4" />
 
                 <CheckBox
-                    android:id="@+id/checkBox6"
+                    android:id="@+id/check_laber5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CheckBox" />
+                    android:layout_weight="1"
+                    android:text="@string/setting_label_5" />
 
                 <CheckBox
-                    android:id="@+id/checkBox5"
+                    android:id="@+id/check_laber6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CheckBox" />
+                    android:layout_weight="1"
+                    android:text="@string/setting_label_6" />
             </TableRow>
 
             <TableRow
@@ -279,16 +285,26 @@
                 android:layout_height="match_parent" >
 
                 <CheckBox
-                    android:id="@+id/checkBox10"
+                    android:id="@+id/check_laber7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CheckBox" />
+                    android:layout_weight="1"
+                    android:text="@string/setting_label_7" />
 
                 <CheckBox
-                    android:id="@+id/checkBox9"
+                    android:id="@+id/check_laber8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CheckBox" />
+                    android:layout_weight="1"
+                    android:text="@string/setting_label_8" />
+
+                <CheckBox
+                    android:id="@+id/check_laber9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CheckBox"
+                    android:visibility="invisible" />
 
 
             </TableRow>
@@ -298,13 +314,45 @@
                 android:layout_height="match_parent" />
         </TableLayout>
 
-        <GridView
-            android:id="@+id/laber_grid"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
-        </GridView>
+    </LinearLayout>
 
+    <ImageView
+        android:id="@+id/GapimageView5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_imagine_cut"
+        app:srcCompat="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/textView_Set4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_textview"
+        android:maxLines="1"
+        android:text="@string/setting_system" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/settings_usr_info"
+        android:layout_marginTop="@dimen/settings_imagine_cut"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/setting_text6"
+            android:layout_width="@dimen/settings_usr_info_text_w2"
+            android:layout_height="wrap_content"
+            android:text="@string/setting_music_size"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"/>
+
+        <EditText
+            android:id="@+id/usr_setting_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/settings_usr_info_right"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:text="@string/setting_min_size" />
     </LinearLayout>
 
 
