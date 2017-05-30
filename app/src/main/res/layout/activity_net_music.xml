@@ -24,10 +24,11 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/change_song_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="OnButtonChangeSong"
             android:text="@string/net_button_change"
             android:textSize="18sp" />
 
@@ -87,6 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/net_button_stop"
+            android:onClick="OnButtonStop"
             android:textSize="18sp" />
 
 

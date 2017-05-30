@@ -29,6 +29,12 @@ public class SongInfo {
      */
     public long size;
 
+    /*
+    文件名
+     */
+
+    public String filename;
+
 //    public SongInfo(SongInfo newinfo) {
 //        this.song = newinfo.song;
 //        this.singer = newinfo.singer;

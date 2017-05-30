@@ -53,16 +53,17 @@
     <string name="key_server_ip">server_ip</string>
     <string name="key_server_port">server_port</string>
     <string name="key_personal_label">personal_label</string>
+    <string name="key_file_size">file_size</string>
 
 
-    <string name="net_music_null">推荐列表为空，请检查网络连接。</string>
-    <string name="net_message">推荐的音乐：\n当前第 %d 首。</string>
+    <string name="net_music_null">推荐列表为空，请检查服务器连接。</string>
+    <string name="net_message">推荐的音乐（共10首）：\n当前第 %d 首。</string>
     <string name="net_button_change">换一首</string>
     <string name="net_button_down">下载这首歌曲</string>
     <string name="net_button_play">在线播放</string>
     <string name="net_button_stop">停止</string>
-    <string name="net_text_song">歌曲名</string>
-    <string name="net_text_url">htpp://...</string>
+    <string name="net_text_song">示例歌曲.mp3</string>
+    <string name="net_text_url">http://p2.music.126.net/5T8uHAF3ihq8aF4v2gkBTg==/3432675311742798.mp3</string>
 
 
     <string name="play_item">Play item</string>

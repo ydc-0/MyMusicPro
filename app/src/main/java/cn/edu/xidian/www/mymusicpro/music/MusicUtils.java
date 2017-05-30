@@ -8,6 +8,8 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.edu.xidian.www.mymusicpro.settings.SettingDat;
+
 /**
  * Created by chenyudong on 2017/5/7.
  */
@@ -24,12 +26,16 @@ public class MusicUtils {
     private static List<SongInfo> music_url_list = new ArrayList<>();
 
 
+
+
     public static List<SongInfo> getMusicData() {
         return local_music_list;
     }
-    public static List<SongInfo> getMusic_url_list() {
+    public static List<SongInfo> getMusicUrlList() {
         return music_url_list;
     }
+
+
 
     public static void SearchLocalMusic(Context context) {
         Log.i(TAG, "getMusicData: start.");
@@ -46,9 +52,10 @@ public class MusicUtils {
                 song.path = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA));
                 song.duration = cursor.getInt(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DURATION));
                 song.size = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.SIZE));
+
 //                Log.i(TAG, "getMusicData: song:" + song.song + "singer:" + song.singer + "path:" + song.path
 //                        + "duration:" + song.duration + "size:" + song.size);
-                if (song.size > 1024 * 800) {
+                if (song.size > 1024 * SettingDat.file_size) {
                     // 注释部分是切割标题，分离出歌曲名和歌手 （本地媒体库读取的歌曲信息不规范）
                     if (song.song.contains("-")) {
                         String[] str = song.song.split("-");
@@ -66,7 +73,7 @@ public class MusicUtils {
     /**
      * 定义一个方法用来格式化获取到的时间
      */
-    public static String formatTime(int time) {
+    static String formatTime(int time) {
         if (time / 1000 % 60 < 10) {
             return time / 1000 / 60 + ":0" + time / 1000 % 60;
 
@@ -76,8 +83,8 @@ public class MusicUtils {
 
     }
 
-    public void InitUrlMusic(List<SongInfo> songInfo) {
+    public static void InitUrlMusic(List<SongInfo> songInfo) {
+        Log.i(TAG, "InitUrlMusic: ");
         music_url_list = songInfo;
-
     }
 }

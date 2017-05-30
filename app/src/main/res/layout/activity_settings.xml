@@ -224,7 +224,7 @@
             android:textColor="@color/colorBlack" />
 
         <TableLayout
-            android:id="@+id/laber_table"
+            android:id="@+id/label_table"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -344,13 +344,13 @@
             android:textColor="@color/colorBlack"/>
 
         <EditText
-            android:id="@+id/usr_setting_path"
+            android:id="@+id/usr_setting_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/settings_usr_info_right"
             android:layout_weight="1"
             android:background="@drawable/edit_bg"
-            android:inputType="textEmailAddress"
+            android:inputType="number"
             android:maxLines="1"
             android:text="@string/setting_min_size" />
     </LinearLayout>

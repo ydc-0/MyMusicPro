@@ -18,23 +18,64 @@ public class Player implements MediaPlayer.OnBufferingUpdateListener, MediaPlaye
         MediaPlayer.OnPreparedListener {
 
     public MediaPlayer mediaPlayer; // 媒体播放器
+    private String TAG = "Player";
     private SeekBar seekBar; // 拖动条
     private Timer mTimer = new Timer(); // 计时器
+
+    private boolean isplaying;
+
 
     // 初始化播放器
     public Player(SeekBar seekBar) {
         super();
         this.seekBar = seekBar;
-        try {
-            mediaPlayer = new MediaPlayer();
-            mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);// 设置媒体流类型
-            mediaPlayer.setOnBufferingUpdateListener(this);
-            mediaPlayer.setOnPreparedListener(this);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        isplaying = false;
+        mediaPlayer = new MediaPlayer();
+
+        //调用mediaPlayer的监听方法，音频准备完毕会响应此方法
+        mediaPlayer.setOnPreparedListener(this);
+        mediaPlayer.setOnBufferingUpdateListener(this);
+
+
+        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);// 设置媒体流类型
         // 每一秒触发一次
         mTimer.schedule(timerTask, 0, 1000);
+    }
+
+    public void PlayLocal(String path)
+    {
+        if(isplaying)
+        {
+            mediaPlayer.stop();
+        }
+        //播放之前要先把音频文件重置
+        try {
+            mediaPlayer.reset();
+            //调用方法传进去要播放的音频路径
+            mediaPlayer.setDataSource(path);
+            //异步准备音频资源
+            mediaPlayer.prepareAsync();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void PlayNet(String url)
+    {
+        if(isplaying)
+        {
+            mediaPlayer.stop();
+        }
+        try {
+
+            //mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);// 设置媒体流类型
+            mediaPlayer.reset();
+            mediaPlayer.setDataSource(url); // 设置数据源
+            mediaPlayer.prepareAsync(); // prepare自动播放 异步
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     // 计时器
@@ -76,12 +117,6 @@ public class Player implements MediaPlayer.OnBufferingUpdateListener, MediaPlaye
             mediaPlayer.reset();
             mediaPlayer.setDataSource(url); // 设置数据源
             mediaPlayer.prepare(); // prepare自动播放
-        } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        } catch (IllegalStateException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -94,10 +129,10 @@ public class Player implements MediaPlayer.OnBufferingUpdateListener, MediaPlaye
 
     // 停止
     public void stop() {
+        isplaying = false;
         if (mediaPlayer != null) {
             mediaPlayer.stop();
-            mediaPlayer.release();
-            mediaPlayer = null;
+            seekBar.setProgress(0);
         }
     }
 
@@ -105,13 +140,14 @@ public class Player implements MediaPlayer.OnBufferingUpdateListener, MediaPlaye
     @Override
     public void onPrepared(MediaPlayer mp) {
         mp.start();
-        Log.e("mediaPlayer", "onPrepared");
+        Log.i(TAG, "onPrepared: ");
     }
 
     // 播放完成
     @Override
     public void onCompletion(MediaPlayer mp) {
         Log.e("mediaPlayer", "onCompletion");
+        isplaying = false;
     }
 
     /**

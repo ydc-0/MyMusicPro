@@ -7,7 +7,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import cn.edu.xidian.www.mymusicpro.appfile.MuiscDataFile;
+import cn.edu.xidian.www.mymusicpro.internet.ConnectServer;
 import cn.edu.xidian.www.mymusicpro.music.MusicUtils;
+import cn.edu.xidian.www.mymusicpro.music.SongInfo;
 import cn.edu.xidian.www.mymusicpro.settings.SettingDat;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,8 +26,13 @@ public class MainActivity extends AppCompatActivity {
         setTitle(R.string.main_title);
         SettingDat.InitSettingDat(this);
 
+        // search local music
         Toast.makeText(getApplicationContext(), R.string.local_music_search, Toast.LENGTH_LONG).show();
         MusicUtils.SearchLocalMusic(this);
+
+        //socket thread
+        Thread soc_th = new ConnectServer(this);
+        soc_th.start();
 
     }
 
